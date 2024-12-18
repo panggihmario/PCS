@@ -6,7 +6,7 @@ import { CircleDollarSign, Pill, Clock4, Check, X, ArrowRight } from "lucide-rea
 const Notification = () => {
   const navigate = useNavigate();
   return (<div className="max-w-[500px] ml-auto mr-auto">
-    <div className="flex gap-2 items-center shadow-card p-4">
+    <div className="flex gap-2 items-center shadow-card p-4 mb-1">
       <div onClick={() => navigate(-1)} ><ArrowLeft size={20} /></div>
       <div className="text-lg bg-gradient-to-r font-bold from-[#e63631]  to-[#ca335b] text-transparent bg-clip-text">Notification</div>
 
@@ -14,7 +14,7 @@ const Notification = () => {
     {
       notifications.map(notif => {
         return (
-          <div className="px-4 py-2 grid grid-cols-[max-content_1fr] gap-2">
+          <div className={`px-4 py-2 grid grid-cols-[max-content_1fr] gap-2 ${(notif.status === 'approved' || notif.status === 'paid') && 'bg-blue-200'} `}>
             <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#e63631] relative">
               {notif.label === 'Reimbursement' && <CircleDollarSign color="white" />}
               {notif.label === 'Sickness' && <Pill color="white" />}
