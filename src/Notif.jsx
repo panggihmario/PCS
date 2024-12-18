@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { CircleDollarSign, Pill, Clock4, Check, X, ArrowRight } from "lucide-react"
 const Notification = () => {
   const navigate = useNavigate();
-  return (<div>
+  return (<div className="max-w-[500px] ml-auto mr-auto">
     <div className="flex gap-2 items-center shadow-card p-4">
       <div onClick={() => navigate(-1)} ><ArrowLeft size={20} /></div>
       <div className="text-lg bg-gradient-to-r font-bold from-[#e63631]  to-[#ca335b] text-transparent bg-clip-text">Notification</div>

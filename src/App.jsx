@@ -10,7 +10,7 @@ import { useNavigate } from 'react-router-dom';
 function App() {
   const navigate = useNavigate();
   return (
-    <div className="relative" >
+    <div className="relative max-w-[500px] ml-auto mr-auto" >
       <div className="flex items-center justify-between p-4">
         <div class="text-lg bg-gradient-to-r font-bold from-[#e63631]  to-[#ca335b] text-transparent bg-clip-text">Kerja Yuk!</div>
         <div onClick={() => navigate('/notification')}>
